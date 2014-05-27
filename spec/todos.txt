@@ -1,0 +1,12 @@
+As a user I want to manage my todos so that I can achieve more in life
+
+It should open the app
+Given no app
+When opening the app
+Then the title is shown
+And the list is empty
+
+It should add an item
+Given an open app
+When adding 'Rule the web'
+Then 'Rule the web' is in the list
