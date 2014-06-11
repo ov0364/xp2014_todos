@@ -1,12 +1,14 @@
-As a user I want to manage my todos so that I can achieve more in life
+Stories
+As a user I want to manage my todos so that I can achieve more in my life.
 
-It should open the app
+Scenarios
+it should open the app
 Given no app
-When opening the app
-Then the title is shown
-And the list is empty
+when opening the app
+then the title is shown
+and the list is empty
 
-It should add an item
+it should add an item
 Given an open app
-When adding 'Rule the web'
-Then 'Rule the web' is in the list
+when adding "Rule the web"
+then "Rule the web" will shown in the list

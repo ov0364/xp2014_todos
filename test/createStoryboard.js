@@ -57,18 +57,18 @@ function getLinks() {
     });
 }
 
-casper.thenOpen('http://localhost:8111/xp2014_todos/view', function() {
+casper.thenOpen('http://localhost:8111/view/', function() {
     links = this.evaluate(getLinks);
     console.log("Links : " + links.length, JSON.stringify(links));
     casper.eachThen(links, function(response){
         this.thenOpen(response.data, function(response) {
-            console.log(this.getCurrentUrl().split(".")[0].split("/")[5]);
+            console.log(this.getCurrentUrl().split(".")[0].split("/")[4]);
 
             // HACK for not showing the placeholder
             this.fillSelectors('form', {'#new-todo':' '}, false);
             this.fillSelectors('form', {'#new-todo':''}, false);        
 
-            phantomcss.screenshot('html', this.getCurrentUrl().split(".")[0].split("/")[5]);
+            phantomcss.screenshot('html', this.getCurrentUrl().split(".")[0].split("/")[4]);
         });
     });
 });

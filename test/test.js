@@ -83,7 +83,7 @@ casper.start();
 casper.viewport(600, 600);
 
 var i = 0;
-casper.thenOpen('http://localhost:8111/xp2014_todos/src/index.html', function(){
+casper.thenOpen('http://localhost:8111/src/index.html', function(){
 });
 
 casper.waitForSelector('form', function(){
