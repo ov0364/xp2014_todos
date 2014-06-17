@@ -1,7 +1,7 @@
 xp2014_todos
 ============
 
-XP2014 ROME Tech demo 
+AAB Knoweldge Session 
 
 storyboarding meets BDD
 

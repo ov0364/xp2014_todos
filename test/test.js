@@ -83,6 +83,7 @@ casper.start();
 casper.viewport(600, 600);
 
 var i = 0;
+// Given an open todo app.
 casper.thenOpen('http://localhost:8111/src/index.html', function(){
 });
 
@@ -96,28 +97,18 @@ casper.waitForSelector('form', function(){
 
 
 casper.then(function(){
+    // Then the title is shown
+    // And the list is empty
     phantomcss.screenshot('html', '01 - opening the app');
 });
 
 casper.then(function(){
-    // Given an open todo app.
-    
     // When submit'rule the web'
 	casper.fillSelectors('form', {'input':'Rule the web'}, true);
-
-//    casper.sendKeys('#new-todo', 'rule the web', {keepFocus: true});
-//    casper.sendKeys('#new-todo', casper.page.event.key.Enter , {keepFocus: true});
-    
 });
 
 casper.then(function(){
-//    // HACK
-//    this.fillSelectors('form', {'#new-todo':' '}, false);
-//    this.fillSelectors('form', {'#new-todo':''}, false);
-//    // END HACK
-
-
-    // Then rule the web submitted.
+    // Then "Rule the web" is in the list.
     phantomcss.screenshot('html', '02 - adding rule the web');
 });
 

@@ -1,14 +1,17 @@
-Stories
-As a user I want to manage my todos so that I can achieve more in my life.
+BDD Steps:
+1. Write Specs
+2. Write Tests
+3. Make it red
+4. Write App
+5. Make it green
 
-Scenarios
-it should open the app
-Given no app
-when opening the app
-then the title is shown
-and the list is empty
 
-it should add an item
-Given an open app
-when adding "Rule the web"
-then "Rule the web" will shown in the list
+1. Write Specs.
+Story
+As a [role] I want [feature] so that [benefit]
+
+Scenarios 
+It should [do something] 
+Given [initial context]
+when [event occurs]
+then [ensure some outcomes].
